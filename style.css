@@ -462,6 +462,7 @@ footer .right .infos-footer p b {
 
 @media only screen and (max-width: 800px) {
     body {
+        height: auto;
         font-size: 12px;
         background-position: left;
     }
@@ -472,7 +473,7 @@ footer .right .infos-footer p b {
 
     .first-section {
         width: 80%;
-        height: 40vh;
+        height: 60vh;
         padding-bottom: 5vh;
         margin: 0 auto;
         align-items: flex-end;
@@ -506,7 +507,7 @@ footer .right .infos-footer p b {
     }
 
     .text {
-        height: 40vh;
+        height: 60vh;
         margin-bottom: 5vh;
     }
 
@@ -534,21 +535,32 @@ footer .right .infos-footer p b {
     }
 
     .cards .card {
-        width: 300px;
+        width: 70%;
         height: auto;
-        padding: 1em 1em 1.4em;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: transparent;
+        box-shadow: 0 0 #00000000;
     }
 
     .cards .card img {
-        display: none;
+        width: 40px;
     }
 
     .cards .card .img-marketing {
-        left: -5px;
+        left: 0px;
     }
 
     .cards .card h4 {
         font-size: 1em;
+        font-family: 'Ubuntu';
+        white-space: nowrap;
+    }
+
+    .cards .card p{
+        display: none;
     }
 
     .catalogo {
@@ -579,18 +591,20 @@ footer .right .infos-footer p b {
     .catalogo .left .text p {
         font-size: 1em;
         text-align: center;
+        display: none;
     }
 
     .catalogo .right {
         display: flex;
         width: 90%;
         height: auto;
-        border-radius: 30px;
+        border-radius: 20px;
         padding: 4em 2em;
     }
 
     .catalogo .right .option h5 {
         font-size: 1em;
+        letter-spacing: 2px;
     }
 
     .catalogo .right .teste {
