@@ -527,10 +527,11 @@ footer .right .infos-footer p b {
     }
 
     .cards {
-        height: 30vh;
+        height: 10vh;
         flex-direction: row;
         overflow: hidden;
         align-items: center;
+        margin-bottom: 20vh;
     }
 
     .cards .card {
