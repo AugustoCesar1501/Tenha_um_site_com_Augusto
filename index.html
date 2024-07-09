@@ -45,14 +45,14 @@
                 compra começam com uma pesquisa na internet.
             </p>
         </div>
-        <div class="card">
+        <div class="card car">
             <div class="fundo"></div>
             <img src="./img/credibilidade.svg" alt="">
             <h4>Credibilidade e profisionalismo</h4>
             <p>Ter um site esteticamente agradável, fácil de navegar e que forneça informações claras sobre produtos,
                 serviços e informações de contato é crucial para estabelecer confiança e atrair novos negócios.</p>
         </div>
-        <div class="card">
+        <div class="card ca">
             <div class="fundo"></div>
             <img src="./img/marketing.svg" alt="" class="img-marketing">
             <h4>Marketing e Promoção Eficientes</h4>
@@ -60,6 +60,15 @@
                 Isso inclui desde a promoção de produtos e serviços até a publicação de conteúdo útil e relevante para
                 seu público-alvo.</p>
         </div>
+        <script>
+            var copy = document.querySelector('.card').cloneNode(true)
+            var teste = document.querySelector('.car').cloneNode(true)
+            var dnv = document.querySelector('.ca').cloneNode(true)
+            document.querySelector('.cards').appendChild(copy)
+            document.querySelector('.cards').appendChild(copy)
+            document.querySelector('.cards').appendChild(teste)
+            document.querySelector('.cards').appendChild(dnv)
+        </script>
     </div>
     <section class="catalogo">
         <div class="left">
