@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/internet.svg">
-    <title>Tenha um site com Amalfi Tech</title>
+    <title>Amalfi Tech</title>
 </head>
 
-<body>
+<body id="body">
     <section class="first-section">
         <div class="text-left">
-            <h3>amalfi tech.</h3>
+            <h3>Amalfi Tech.</h3>
             <h2>Destaque-se, <br>
                 Tenha seu próprio site!</h2>
             <p>Um site para conectar você ao mundo: <br>
@@ -23,7 +23,7 @@
         </div>
     </section>
     <div class="button-init">
-        <a href="https://w.app/Z849lC" target="_blank">Saiba mais</a>
+        <a href="https://api.whatsapp.com/send?phone=5511917872101" target="_blank">Saiba mais</a>
     </div>
     <div class="text">
         <img src="./img/internet.svg" alt="">
@@ -33,7 +33,7 @@
 
 
     <div class="last-title of-cards">
-        <h3>Benefícios garantidos</h3>
+        <h3>Benefícios em ter seu próprio site</h3>
     </div>
     <div class="cards">
         <div class="card">
@@ -62,6 +62,101 @@
                 seu público-alvo.</p>
         </div>
     </div>
+
+    <section class="about">
+        <div class="about-left">
+            <div class="text">
+                <h3>Sobre nós</h3>
+                <p>
+                    Busca constante de conhecimento voltado para a estratégia e resultados.
+                </p>
+                <p>
+                    Ética e transparência permeiam nosso relacionamento com colaboradores, clientes, parceiros e
+                    mercado.
+                </p>
+                <p>
+                    Lealdade na construção das nossas relações, analisando, entendendo, identificando e atendendo as
+                    necessidades dos nossos clientes.
+                </p>
+                <p>
+                    Ações direcionadas para que nossos clientes atinjam seus objetivos e para que nosso trabalho seja
+                    maior
+                    que
+                    a soma dos nossos esforços.
+                </p>
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="photo-group">
+                <div class="photo"></div>
+                <div class="name-info">
+                    <h5>Augusto César</h5>
+                    <p>Desenvolvedor Front-End</p>
+                    <a onclick="openAugust()" class="link-info">Ver mais</a>
+                </div>
+            </div>
+            <div class="photo-group">
+                <div class="photo lipe"></div>
+                <div class="name-info">
+                    <h5>Filipe Amalfi</h5>
+                    <p>CEO</p>
+                    <a onclick="openLipe()" class="link-info">Ver mais</a>
+                </div>
+            </div>
+        </div>
+        <div id="augusto-more" class="more-info">
+            <div class="close">
+                <img src="./img/close.svg" alt="" width="30" onclick="closeAugust()">
+            </div>
+            <div class="perfil">
+                <div class="perfil-left">
+                    <div class="top"></div>
+                    <div class="bottom">
+                        <div class="title">
+                            <h4>Augusto César</h5>
+                                <h5>Desenvolvedor Front-End</h5>
+                        </div>
+                        <div class="infos">
+                            <p>21 anos</p>
+                            <p>São Paulo, SP</p>
+                            <p>Ig: augusto_cesar1501</p>
+                            <p>Tel: (11) 91787-2101</p>
+                            <p>Gmail: augustocrocha150123</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfil-right">
+                    <p>
+                        Sou desenvolvedor front-end, com uma trajetória que começou na ETEC em 2020. Embora tenha tido
+                        que interromper meus estudos devido à pandemia, retomei em 2021 e me formei em Desenvolvimento
+                        de Sistemas. Foi na ETEC que descobri minha paixão pelo front-end, iniciando minha carreira na
+                        área.
+                    </p>
+                    <p>
+                        Após concluir a ETEC, decidi me aprofundar ainda mais e ingressei na faculdade de Análise e
+                        Desenvolvimento de Sistemas, buscando aperfeiçoamento e profissionalização como desenvolvedor
+                        front-end. Durante a faculdade, tive a oportunidade de estagiar por um ano, experiência que
+                        marcou um grande avanço na minha carreira. Nesse período, coloquei em prática tudo o que havia
+                        aprendido, liderando equipes, iniciando novos projetos e aprimorando projetos existentes.
+                    </p>
+                    <p>
+                        Atualmente, atuo na Amalfi Tech, onde utilizo todo o conhecimento e habilidades adquiridos para
+                        ajudar empresas e empresários a potencializarem seu desempenho no mercado digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="filipe-more" class="more-info">
+            <div class="close">
+                <img src="./img/close.svg" alt="" width="30" onclick="closeLipe()">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
     <section class="catalogo">
         <div class="left">
             <div class="text">
@@ -160,6 +255,27 @@
         document.querySelector('.cards').appendChild(copy)
         document.querySelector('.cards').appendChild(teste)
         document.querySelector('.cards').appendChild(dnv)
+    }
+
+    var moreInfoAugusto = document.getElementById("augusto-more").style
+    var moreInfoLipe = document.getElementById("filipe-more").style
+    let body = document.getElementById("body").style
+
+
+    function openAugust() {
+        moreInfoAugusto.display = "flex"
+        body.overflowY = "hidden"
+    } function closeAugust() {
+        moreInfoAugusto.display = "none"
+        body.overflowY = "scroll"
+    }
+
+    function openLipe() {
+        moreInfoLipe.display = "flex"
+        body.overflowY = "hidden"
+    } function closeLipe() {
+        moreInfoLipe.display = "none"
+        body.overflowY = "scroll"
     }
 </script>
 

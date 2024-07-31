@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-@font-face {
-    font-family: 'Nimbus';
-    src: url('./fonts/TAN_Nimbus/TAN-NIMBUS.otf');
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +16,15 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: #383838;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #84236a;
 }
 
 a {
@@ -118,7 +122,6 @@ section {
 .text h3 {
     width: 50%;
     text-align: center;
-    font-family: 'Nimbus';
     font-weight: 100;
     letter-spacing: 2px;
     font-size: 1.8em;
@@ -166,7 +169,6 @@ section {
     position: relative;
     z-index: 1;
     font-size: 1.3em;
-    font-family: 'Nimbus';
     font-weight: 100;
     letter-spacing: 2px;
 }
@@ -194,12 +196,175 @@ section {
 
 .cards .card:hover .fundo {
     width: 100%;
-    height: 60vh;
+    height: 100%;
     border-radius: 8px;
     background-color: #8d8d8d;
     background-image: linear-gradient(45deg, #84236a, #d41c78);
 }
 
+/* Section about */
+.about {
+    height: 85vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.about-left,
+.about-right {
+    width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-right {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-left .text {
+    height: 100%;
+}
+
+.about-left .text h3,
+.about-left .text p {
+    width: 100%;
+    text-align: left;
+}
+
+.about-right .photo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-right .photo-group .photo {
+    width: 200px;
+    height: 200px;
+    background-image: url('./img/augusto.jpeg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    border: 3px solid #84236a;
+}
+
+.about-right .photo-group .lipe {
+    background-image: url('./img/file.jpeg');
+}
+
+.about-right .photo-group .name-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-right .photo-group .name-info h5 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.about-right .photo-group .name-info p {
+    font-weight: 500;
+}
+
+.about-right .photo-group .name-info .link-info {
+    margin-top: 10px;
+    width: 50%;
+    padding: 5px 0;
+}
+
+/* pop up infos */
+.about .more-info {
+    width: 60%;
+    height: 80vh;
+    background-color: #111;
+    position: fixed;
+    top: 5%;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .more-info .close {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: #fff; */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.about .more-info .close img {
+    cursor: pointer;
+}
+
+.about .more-info .perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+}
+
+.about .more-info .perfil .perfil-left {
+    width: 25%;
+    height: 100%;
+    border-right: 2px solid #84236a;
+}
+
+.about .more-info .perfil .perfil-left .top {
+    width: 100%;
+    height: 40%;
+    background-image: url('./img/augusto.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 20px;
+}
+
+.about .more-info .perfil .perfil-left .bottom {
+    height: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.about .more-info .perfil .perfil-left .bottom .infos {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.about .more-info .perfil .perfil-left .bottom p {
+    font-size: .8em;
+}
+
+.about .more-info .perfil .perfil-right {
+    width: 70%; 
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.about .more-info .perfil .perfil-right p {
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+/* Catalogo */
 .catalogo {
     display: flex;
     justify-content: center;
@@ -260,7 +425,6 @@ section {
 
 .catalogo .right .option h5 {
     font-size: 1.3em;
-    font-family: 'Nimbus';
     font-weight: 100;
     letter-spacing: 5px;
 }
@@ -291,7 +455,6 @@ section {
 }
 
 .last-title h3 {
-    font-family: 'Nimbus';
     font-weight: 100;
     letter-spacing: 2px;
     font-size: 2em;
@@ -327,7 +490,6 @@ section {
 
 .last-section .models .model .text h4 {
     font-size: 1.3em;
-    font-family: 'Nimbus';
     font-weight: 100;
     letter-spacing: 2px;
 }
@@ -345,12 +507,12 @@ section {
     bottom: -50%;
     border-radius: 40ric 40ric 30px 30px;
     transform: rotate(-5deg);
-    background-position: left;
+    background-position: top;
     background-size: cover;
     transition: all 1s;
 }
 
-.last-section .models .model:hover .imagem {
+.last-section .models .model .imagem {
     width: 100%;
     transform: rotate(0deg);
     right: 0;
@@ -358,7 +520,7 @@ section {
     border-radius: 20px;
 }
 
-.last-section .models .model .imagem::after {
+/* .last-section .models .model .imagem::after {
     content: 'Modelo exemplo';
     position: absolute;
     bottom: 0;
@@ -369,7 +531,7 @@ section {
     align-items: center;
     justify-content: center;
     transition: all .5s;
-}
+} */
 
 
 .last-section .models .model .imagem:hover::after {
@@ -415,7 +577,7 @@ footer .left {
 
 footer .left .text-footer {
     border-right: 1px solid #f5f5f55e;
-    width: 60%;
+    width: 100%;
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -424,10 +586,10 @@ footer .left .text-footer {
 
 footer .left .text-footer h2,
 footer .left .text-footer h3 {
-    font-family: 'Nimbus';
     font-weight: 100;
     letter-spacing: 2px;
     font-size: 2em;
+    text-align: center;
 }
 
 footer .left .text-footer h3 {
