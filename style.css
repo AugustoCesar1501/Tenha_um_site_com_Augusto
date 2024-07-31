@@ -423,6 +423,10 @@ section {
     gap: 8px;
 }
 
+.catalogo .right .option a {
+    width: 40%;
+}
+
 .catalogo .right .option h5 {
     font-size: 1.3em;
     font-weight: 100;
@@ -431,7 +435,7 @@ section {
 
 .catalogo .right .teste {
     padding: 3em 0;
-    margin: 3em 0;
+    margin: 1em 0 3em;
     border-top: 1px solid #f5f5f583;
     border-bottom: 1px solid #f5f5f583;
 }
